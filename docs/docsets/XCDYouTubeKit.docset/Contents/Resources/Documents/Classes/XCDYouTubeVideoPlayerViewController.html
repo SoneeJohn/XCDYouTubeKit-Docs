@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>XCDYouTubeVideoPlayerViewController Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0" />
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Class/XCDYouTubeVideoPlayerViewController" class="dashAnchor"></a>
+    <a title="XCDYouTubeVideoPlayerViewController Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p>
+          <a href="../index.html">XCDYouTubeKit 2.14.1 Docs</a>
+          <span class="no-mobile"> (85% documented)</span>
+        </p>
+    
+        <p class="header-right">
+          <a href="https://github.com/0xced/XCDYouTubeKit">
+            <img src="../img/gh.png"/>
+            <span class="no-mobile">View on GitHub</span>
+          </a>
+        </p>
+    
+      </div>
+    </header>
+    <div id="breadcrumbs-container">
+      <div class="content-wrapper">
+        <p id="breadcrumbs">
+          <span class="no-mobile">
+            <a href="../index.html">XCDYouTubeKit Reference</a>
+            <img id="carat" src="../img/carat.png" />
+          </span>
+          XCDYouTubeVideoPlayerViewController Class Reference
+        </p>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="article-wrapper">
+        <article class="main-content">
+          <section>
+            <section class="section">
+              <h1>XCDYouTubeVideoPlayerViewController</h1>
+              <div class="aside aside-deprecated">
+                <p class="aside-title">Deprecated</p>
+                <p>Use <code>AVFoundation</code> or <code>AVKit</code> APIs instead.</p>
+
+              </div>
+                <div class="declaration">
+                  <div class="language">
+                    <p class="aside-title">Objective-C</p>
+                    <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">XCDYouTubeVideoPlayerViewController</span> <span class="p">:</span> <span class="nc">MPMoviePlayerViewController</span>
+<span class="cp">#pragma clang diagnostic pop
+</span>
+<span class="cm">/**
+ *  ------------------
+ *  @name Initializing
+ *  ------------------
+ */</span>
+
+<span class="cm">/**
+ *  Initializes a YouTube video player view controller
+ *
+ *  @param videoIdentifier A 11 characters YouTube video identifier. If the video identifier is invalid the `MPMoviePlayerPlaybackDidFinishNotification` will be posted with a `MPMovieFinishReasonPlaybackError` reason.
+ *
+ *  @return An initialized YouTube video player view controller with the specified video identifier.
+ *
+ *  @discussion You can pass a nil *videoIdentifier* (or use the standard `init` method instead) and set the `&lt;videoIdentifier&gt;` property later.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span> <span class="nf">initWithVideoIdentifier</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">videoIdentifier</span> <span class="n">NS_DESIGNATED_INITIALIZER</span><span class="p">;</span>
+
+<span class="cm">/**
+ *  ------------------------------------
+ *  @name Accessing the video identifier
+ *  ------------------------------------
+ */</span>
+
+<span class="cm">/**
+ *  The 11 characters YouTube video identifier.
+ */</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">videoIdentifier</span><span class="p">;</span>
+
+<span class="cm">/**
+ *  ------------------------------------------
+ *  @name Defining the preferred video quality
+ *  ------------------------------------------
+ */</span>
+
+<span class="cm">/**
+ *  The preferred order for the quality of the video to play. Plays the first match when multiple video streams are available.
+ *
+ *  Defaults to @[ XCDYouTubeVideoQualityHTTPLiveStreaming, @(XCDYouTubeVideoQualityHD720), @(XCDYouTubeVideoQualityMedium360), @(XCDYouTubeVideoQualitySmall240) ]
+ *
+ *  You should set this property right after calling the `&lt;initWithVideoIdentifier:&gt;` method. Setting this property to nil restores its default values.
+ *
+ *  @see XCDYouTubeVideoQuality
+ */</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">null_resettable</span><span class="p">)</span> <span class="n">NSArray</span> <span class="o">*</span><span class="n">preferredVideoQualities</span><span class="p">;</span>
+
+<span class="cm">/**
+ *  ------------------------
+ *  @name Presenting a video
+ *  ------------------------
+ */</span>
+
+<span class="cm">/**
+ *  Present the video inside a view.
+ *
+ *  @param view The view inside which you want to present the video.
+ *
+ *  @discussion The video view is added as a subview of the specified view. The video does not start playing immediately, you have to call `[videoPlayerViewController.moviePlayer play]` for playback to start. See `MPMoviePlayerController` documentation for more information.
+ *
+ *  Ownership of the XCDYouTubeVideoPlayerViewController instance is transferred to the view.
+ */</span>
+<span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="nf">presentInView</span><span class="p">:(</span><span class="n">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">view</span><span class="p">;</span>
+
+<span class="k">@end</span></code></pre>
+
+                  </div>
+                  <div class="language">
+                    <p class="aside-title">Swift</p>
+                    <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">XCDYouTubeVideoPlayerViewController</span> <span class="p">:</span> <span class="kt">MPMoviePlayerViewController</span></code></pre>
+
+                  </div>
+                </div>
+              <p>Undocumented</p>
+
+                <div class="slightly-smaller">
+                  <a href="https://github.com/0xced/XCDYouTubeKit/tree/2.14.1/XCDYouTubeKit/XCDYouTubeVideoPlayerViewController.h#L52-L117">Show on GitHub</a>
+                </div>
+            </section>
+            <section class="section task-group-section">
+              <div class="task-group">
+                <div class="task-name-container">
+                  <a name="/Initializing"></a>
+                  <a name="//apple_ref/objc/Section/Initializing" class="dashAnchor"></a>
+                  <div class="section-name-container">
+                    <a class="section-name-link" href="#/Initializing"></a>
+                    <h3 class="section-name"><p>Initializing</p>
+</h3>
+                  </div>
+                </div>
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(cs)XCDYouTubeVideoPlayerViewController(im)initWithVideoIdentifier:"></a>
+                      <a name="//apple_ref/objc/Method/-initWithVideoIdentifier:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(cs)XCDYouTubeVideoPlayerViewController(im)initWithVideoIdentifier:">-initWithVideoIdentifier:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Initializes a YouTube video player view controller</p>
+
+<p>@discussion You can pass a nil <em>videoIdentifier</em> (or use the standard <code>init</code> method instead) and set the <code>&lt;videoIdentifier&gt;</code> property later.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithVideoIdentifier</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">videoIdentifier</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">videoIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>videoIdentifier</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>A 11 characters YouTube video identifier. If the video identifier is invalid the <code>MPMoviePlayerPlaybackDidFinishNotification</code> will be posted with a <code>MPMovieFinishReasonPlaybackError</code> reason.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div>
+                          <h4>Return Value</h4>
+                          <p>An initialized YouTube video player view controller with the specified video identifier.</p>
+                        </div>
+                        <div class="slightly-smaller">
+                          <a href="https://github.com/0xced/XCDYouTubeKit/tree/2.14.1/XCDYouTubeKit/XCDYouTubeVideoPlayerViewController.h#L70">Show on GitHub</a>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="task-group">
+                <div class="task-name-container">
+                  <a name="/Accessing%20the%20video%20identifier"></a>
+                  <a name="//apple_ref/objc/Section/Accessing the video identifier" class="dashAnchor"></a>
+                  <div class="section-name-container">
+                    <a class="section-name-link" href="#/Accessing%20the%20video%20identifier"></a>
+                    <h3 class="section-name"><p>Accessing the video identifier</p>
+</h3>
+                  </div>
+                </div>
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(cs)XCDYouTubeVideoPlayerViewController(py)videoIdentifier"></a>
+                      <a name="//apple_ref/objc/Property/videoIdentifier" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(cs)XCDYouTubeVideoPlayerViewController(py)videoIdentifier">videoIdentifier</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>The 11 characters YouTube video identifier.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">videoIdentifier</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">videoIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div class="slightly-smaller">
+                          <a href="https://github.com/0xced/XCDYouTubeKit/tree/2.14.1/XCDYouTubeKit/XCDYouTubeVideoPlayerViewController.h#L81">Show on GitHub</a>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="task-group">
+                <div class="task-name-container">
+                  <a name="/Defining%20the%20preferred%20video%20quality"></a>
+                  <a name="//apple_ref/objc/Section/Defining the preferred video quality" class="dashAnchor"></a>
+                  <div class="section-name-container">
+                    <a class="section-name-link" href="#/Defining%20the%20preferred%20video%20quality"></a>
+                    <h3 class="section-name"><p>Defining the preferred video quality</p>
+</h3>
+                  </div>
+                </div>
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(cs)XCDYouTubeVideoPlayerViewController(py)preferredVideoQualities"></a>
+                      <a name="//apple_ref/objc/Property/preferredVideoQualities" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(cs)XCDYouTubeVideoPlayerViewController(py)preferredVideoQualities">preferredVideoQualities</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>The preferred order for the quality of the video to play. Plays the first match when multiple video streams are available.</p>
+
+<p>Defaults to @[ XCDYouTubeVideoQualityHTTPLiveStreaming, @(XCDYouTubeVideoQualityHD720), @(XCDYouTubeVideoQualityMedium360), @(XCDYouTubeVideoQualitySmall240) ]</p>
+
+<p>You should set this property right after calling the <code>&lt;initWithVideoIdentifier:&gt;</code> method. Setting this property to nil restores its default values.</p>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    XCDYouTubeVideoQuality
+
+</div>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">null_resettable</span><span class="p">)</span> <span class="n">NSArray</span> <span class="o">*</span><span class="n">preferredVideoQualities</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">preferredVideoQualities</span><span class="p">:</span> <span class="p">[</span><span class="kt">Any</span><span class="p">]</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div class="slightly-smaller">
+                          <a href="https://github.com/0xced/XCDYouTubeKit/tree/2.14.1/XCDYouTubeKit/XCDYouTubeVideoPlayerViewController.h#L98">Show on GitHub</a>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="task-group">
+                <div class="task-name-container">
+                  <a name="/Presenting%20a%20video"></a>
+                  <a name="//apple_ref/objc/Section/Presenting a video" class="dashAnchor"></a>
+                  <div class="section-name-container">
+                    <a class="section-name-link" href="#/Presenting%20a%20video"></a>
+                    <h3 class="section-name"><p>Presenting a video</p>
+</h3>
+                  </div>
+                </div>
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(cs)XCDYouTubeVideoPlayerViewController(im)presentInView:"></a>
+                      <a name="//apple_ref/objc/Method/-presentInView:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(cs)XCDYouTubeVideoPlayerViewController(im)presentInView:">-presentInView:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Present the video inside a view.</p>
+
+<p>@discussion The video view is added as a subview of the specified view. The video does not start playing immediately, you have to call <code>[videoPlayerViewController.moviePlayer play]</code> for playback to start. See <code>MPMoviePlayerController</code> documentation for more information.</p>
+
+<p>Ownership of the XCDYouTubeVideoPlayerViewController instance is transferred to the view.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">presentInView</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">UIView</span> <span class="o">*</span><span class="p">)</span><span class="nv">view</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">present</span><span class="p">(</span><span class="k">in</span> <span class="nv">view</span><span class="p">:</span> <span class="kt">UIView</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>view</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The view inside which you want to present the video.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="slightly-smaller">
+                          <a href="https://github.com/0xced/XCDYouTubeKit/tree/2.14.1/XCDYouTubeKit/XCDYouTubeVideoPlayerViewController.h#L115">Show on GitHub</a>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </section>
+        </article>
+      </div>
+      <div class="nav-wrapper">
+        <nav class="nav-bottom">
+          <ul class="nav-groups">
+            <li class="nav-group-name">
+              <a href="../Classes.html">Classes</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Classes/XCDYouTubeClient.html">XCDYouTubeClient</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/XCDYouTubeLogger.html">XCDYouTubeLogger</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/XCDYouTubeVideo.html">XCDYouTubeVideo</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/XCDYouTubeVideoOperation.html">XCDYouTubeVideoOperation</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/XCDYouTubeVideoPlayerViewController.html">XCDYouTubeVideoPlayerViewController</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/XCDYouTubeVideoQueryOperation.html">XCDYouTubeVideoQueryOperation</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Constants.html">Constants</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:@XCDMetadataKeyLargeThumbnailURL">XCDMetadataKeyLargeThumbnailURL</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:@XCDMetadataKeyMediumThumbnailURL">XCDMetadataKeyMediumThumbnailURL</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:@XCDMetadataKeySmallThumbnailURL">XCDMetadataKeySmallThumbnailURL</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:@XCDMetadataKeyTitle">XCDMetadataKeyTitle</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:@XCDMoviePlayerPlaybackDidFinishErrorUserInfoKey">XCDMoviePlayerPlaybackDidFinishErrorUserInfoKey</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:@XCDYouTubeAllowedCountriesUserInfoKey">XCDYouTubeAllowedCountriesUserInfoKey</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:@XCDYouTubeKitLumberjackContext">XCDYouTubeKitLumberjackContext</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:@XCDYouTubeVideoErrorDomain">XCDYouTubeVideoErrorDomain</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:@XCDYouTubeVideoPlayerViewControllerDidReceiveMetadataNotification">XCDYouTubeVideoPlayerViewControllerDidReceiveMetadataNotification</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:@XCDYouTubeVideoPlayerViewControllerDidReceiveVideoNotification">XCDYouTubeVideoPlayerViewControllerDidReceiveVideoNotification</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:@XCDYouTubeVideoQualityHTTPLiveStreaming">XCDYouTubeVideoQualityHTTPLiveStreaming</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:@XCDYouTubeVideoUserInfoKey">XCDYouTubeVideoUserInfoKey</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Enums.html">Enumerations</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Enums/XCDLogLevel.html">XCDLogLevel</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/XCDYouTubeErrorCode.html">XCDYouTubeErrorCode</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/XCDYouTubeVideoQuality.html">XCDYouTubeVideoQuality</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Protocols.html">Protocols</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Protocols/XCDYouTubeOperation.html">XCDYouTubeOperation</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-wrapper">
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="https://twitter.com/0xced" target="_blank" rel="external">Cédric Luthi</a>. All rights reserved. (Last updated: 2020-10-15)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </div>
+    </div>
+  </body>
+</div>
+</html>

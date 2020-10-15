@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>XCDYouTubeKit  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0" />
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="XCDYouTubeKit  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p>
+          <a href="index.html">XCDYouTubeKit 2.14.1 Docs</a>
+          <span class="no-mobile"> (85% documented)</span>
+        </p>
+    
+        <p class="header-right">
+          <a href="https://github.com/0xced/XCDYouTubeKit">
+            <img src="img/gh.png"/>
+            <span class="no-mobile">View on GitHub</span>
+          </a>
+        </p>
+    
+      </div>
+    </header>
+    <div id="breadcrumbs-container">
+      <div class="content-wrapper">
+        <p id="breadcrumbs">
+          <span class="no-mobile">
+            <a href="index.html">XCDYouTubeKit Reference</a>
+            <img id="carat" src="img/carat.png" />
+          </span>
+          XCDYouTubeKit  Reference
+        </p>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="article-wrapper">
+        <article class="main-content">
+          <section>
+            <section class="section">
+              
+              <h2 id='about' class='heading'>About</h2>
+
+<p><a href="https://circleci.com/gh/0xced/XCDYouTubeKit"><img src="https://img.shields.io/circleci/project/0xced/XCDYouTubeKit/develop.svg?style=flat" alt="Build Status"></a>
+<a href="https://codecov.io/gh/0xced/XCDYouTubeKit/branch/develop"><img src="https://img.shields.io/codecov/c/github/0xced/XCDYouTubeKit/develop.svg?style=flat" alt="Coverage Status"></a>
+<a href="http://cocoadocs.org/docsets/XCDYouTubeKit/"><img src="https://img.shields.io/cocoapods/p/XCDYouTubeKit.svg?style=flat" alt="Platform"></a>
+<a href="https://cocoapods.org/pods/XCDYouTubeKit"><img src="https://img.shields.io/cocoapods/v/XCDYouTubeKit.svg?style=flat" alt="Pod Version"></a>
+<a href="https://github.com/Carthage/Carthage/"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage Compatibility"></a>
+<a href="ttps://swift.org/package-manager/"><img src="https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen" alt="Swift Package Manager Compatibility"></a>
+<a href="LICENSE"><img src="https://img.shields.io/cocoapods/l/XCDYouTubeKit.svg?style=flat" alt="License"></a></p>
+
+<p><strong>XCDYouTubeKit</strong> is a YouTube video player for iOS, tvOS and macOS.</p>
+
+<p><img src="Screenshots/XCDYouTubeVideoPlayerViewController.png" width="480" height="320"></p>
+
+<p>Are you enjoying XCDYouTubeKit? You can say thank you with <a href="https://twitter.com/intent/tweet?text=%400xced%20Thank%20you%20for%20XCDYouTubeKit%2E">a tweet</a>. I am also accepting donations. ;-)</p>
+
+<p><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=MGEPRSNQFMV3W"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" alt="Donate button"></a></p>
+<h2 id='requirements' class='heading'>Requirements</h2>
+
+<ul>
+<li>Runs on iOS 8.0 and later</li>
+<li>Runs on macOS 10.9 and later</li>
+<li>Runs on tvOS 9.0 and later</li>
+</ul>
+<h2 id='warning' class='heading'>Warning</h2>
+
+<p>XCDYouTubeKit is against the YouTube <a href="https://www.youtube.com/t/terms">Terms of Service</a>. The only <em>official</em> way of playing a YouTube video inside an app is with a web view and the <a href="https://developers.google.com/youtube/iframe_api_reference">iframe player API</a>. Unfortunately, this is very slow and quite ugly, so I wrote this player to give users a better viewing experience.</p>
+<h2 id='installation' class='heading'>Installation</h2>
+
+<p>XCDYouTubeKit is available through <a href="https://cocoapods.org/">CocoaPods</a>, <a href="https://github.com/Carthage/Carthage">Carthage</a> and <a href="https://swift.org/package-manager/">Swift Package Manager</a>.</p>
+
+<p>CocoaPods:</p>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s2">"XCDYouTubeKit"</span><span class="p">,</span> <span class="s2">"~&gt; 2.14"</span>
+</code></pre>
+
+<p>Carthage:</p>
+<pre class="highlight objective_c"><code><span class="n">github</span> <span class="s">"0xced/XCDYouTubeKit"</span> <span class="o">~&gt;</span> <span class="mi">2</span><span class="p">.</span><span class="mi">14</span>
+</code></pre>
+
+<p>Swift Package Manager:</p>
+
+<p>Add <code>XCDYouTubeKit</code> to the dependencies value of your <code>Package.swift</code></p>
+<pre class="highlight swift"><code><span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
+    <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/0xced/XCDYouTubeKit.git"</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"2.14.0"</span><span class="p">)</span>
+<span class="p">]</span>
+</code></pre>
+
+<p>Alternatively, you can manually use the provided static library or dynamic framework. In order to use the static library, you must:</p>
+
+<ol>
+<li>Create a workspace (File → New → Workspace…)</li>
+<li>Add your project to the workspace</li>
+<li>Add the XCDYouTubeKit project to the workspace</li>
+<li>Drag and drop the <code>libXCDYouTubeKit.a</code> file referenced from XCDYouTubeKit → Products → libXCDYouTubeKit.a into the <em>Link Binary With Libraries</em> build phase of your app’s target.</li>
+</ol>
+
+<p>These steps will ensure that <code>#import &lt;XCDYouTubeKit/XCDYouTubeKit.h&gt;</code> will work properly in your project.</p>
+<h2 id='usage' class='heading'>Usage</h2>
+
+<p>XCDYouTubeKit is <a href="http://cocoadocs.org/docsets/XCDYouTubeKit/">fully documented</a>.</p>
+<h3 id='ios-8-0-amp-tvos-avplayerviewcontroller' class='heading'>iOS 8.0+ &amp; tvOS (AVPlayerViewController)</h3>
+<pre class="highlight objective_c"><code><span class="n">AVPlayerViewController</span> <span class="o">*</span><span class="n">playerViewController</span> <span class="o">=</span> <span class="p">[</span><span class="n">AVPlayerViewController</span> <span class="nf">new</span><span class="p">];</span>
+<span class="p">[</span><span class="n">self</span> <span class="nf">presentViewController</span><span class="p">:</span><span class="n">playerViewController</span> <span class="nf">animated</span><span class="p">:</span><span class="nb">YES</span> <span class="n">completion</span><span class="o">:</span><span class="nb">nil</span><span class="p">];</span>
+
+<span class="n">__weak</span> <span class="n">AVPlayerViewController</span> <span class="o">*</span><span class="n">weakPlayerViewController</span> <span class="o">=</span> <span class="n">playerViewController</span><span class="p">;</span>
+<span class="p">[[</span><span class="n">XCDYouTubeClient</span> <span class="nf">defaultClient</span><span class="p">]</span> <span class="nf">getVideoWithIdentifier</span><span class="p">:</span><span class="n">videoIdentifier</span> <span class="nf">completionHandler</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="n">XCDYouTubeVideo</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">video</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">video</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">NSDictionary</span> <span class="o">*</span><span class="n">streamURLs</span> <span class="o">=</span> <span class="n">video</span><span class="p">.</span><span class="n">streamURLs</span><span class="p">;</span>
+        <span class="n">NSURL</span> <span class="o">*</span><span class="n">streamURL</span> <span class="o">=</span> <span class="n">streamURLs</span><span class="p">[</span><span class="nf">XCDYouTubeVideoQualityHTTPLiveStreaming</span><span class="p">]</span> <span class="p">?:</span> <span class="n">streamURLs</span><span class="p">[</span><span class="err">@</span><span class="p">(</span><span class="n">XCDYouTubeVideoQualityHD720</span><span class="p">)]</span> <span class="p">?:</span> <span class="n">streamURLs</span><span class="p">[</span><span class="err">@</span><span class="p">(</span><span class="n">XCDYouTubeVideoQualityMedium360</span><span class="p">)]</span> <span class="p">?:</span> <span class="n">streamURLs</span><span class="p">[</span><span class="err">@</span><span class="p">(</span><span class="n">XCDYouTubeVideoQualitySmall240</span><span class="p">)];</span>
+        <span class="n">weakPlayerViewController</span><span class="p">.</span><span class="n">player</span> <span class="o">=</span> <span class="p">[</span><span class="n">AVPlayer</span> <span class="nf">playerWithURL</span><span class="p">:</span><span class="n">streamURL</span><span class="p">];</span>
+        <span class="p">[</span><span class="n">weakPlayerViewController</span><span class="p">.</span><span class="n">player</span> <span class="nf">play</span><span class="p">];</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+        <span class="p">[</span><span class="n">self</span> <span class="nf">dismissViewControllerAnimated</span><span class="p">:</span><span class="nb">YES</span> <span class="nf">completion</span><span class="p">:</span><span class="nb">nil</span><span class="p">];</span>
+    <span class="p">}</span>
+<span class="p">}];</span>
+</code></pre>
+<h3 id='ios-tvos-and-macos' class='heading'>iOS, tvOS and macOS</h3>
+<pre class="highlight objective_c"><code><span class="n">NSString</span> <span class="o">*</span><span class="n">videoIdentifier</span> <span class="o">=</span> <span class="s">@"9bZkp7q19f0"</span><span class="p">;</span> <span class="c1">// A 11 characters YouTube video identifier
+</span><span class="p">[[</span><span class="n">XCDYouTubeClient</span> <span class="nf">defaultClient</span><span class="p">]</span> <span class="nf">getVideoWithIdentifier</span><span class="p">:</span><span class="n">videoIdentifier</span> <span class="nf">completionHandler</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="n">XCDYouTubeVideo</span> <span class="o">*</span><span class="n">video</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">video</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// Do something with the `video` object
+</span>    <span class="p">}</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+        <span class="c1">// Handle error
+</span>    <span class="p">}</span>
+<span class="p">}];</span>
+</code></pre>
+<h3 id='ios-8-0' class='heading'>iOS 8.0</h3>
+
+<p>On iOS, you can use the class <code><a href="Classes/XCDYouTubeVideoPlayerViewController.html">XCDYouTubeVideoPlayerViewController</a></code> the same way you use a <code>MPMoviePlayerViewController</code>, except you initialize it with a YouTube video identifier instead of a content URL.</p>
+<h4 id='present-the-video-in-full-screen' class='heading'>Present the video in full-screen</h4>
+<pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="n">playVideo</span>
+<span class="p">{</span>
+    <span class="n">XCDYouTubeVideoPlayerViewController</span> <span class="o">*</span><span class="n">videoPlayerViewController</span> <span class="o">=</span> <span class="p">[[</span><span class="n">XCDYouTubeVideoPlayerViewController</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">initWithVideoIdentifier</span><span class="p">:</span><span class="s">@"9bZkp7q19f0"</span><span class="p">];</span>
+    <span class="p">[[</span><span class="n">NSNotificationCenter</span> <span class="nf">defaultCenter</span><span class="p">]</span> <span class="nf">addObserver</span><span class="p">:</span><span class="n">self</span> <span class="nf">selector</span><span class="p">:</span><span class="k">@selector</span><span class="p">(</span><span class="n">moviePlayerPlaybackDidFinish</span><span class="o">:</span><span class="p">)</span> <span class="n">name</span><span class="o">:</span><span class="n">MPMoviePlayerPlaybackDidFinishNotification</span> <span class="n">object</span><span class="o">:</span><span class="n">videoPlayerViewController</span><span class="p">.</span><span class="n">moviePlayer</span><span class="p">];</span>
+    <span class="p">[</span><span class="n">self</span> <span class="nf">presentMoviePlayerViewControllerAnimated</span><span class="p">:</span><span class="n">videoPlayerViewController</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="n">moviePlayerPlaybackDidFinish</span><span class="o">:</span><span class="p">(</span><span class="n">NSNotification</span> <span class="o">*</span><span class="p">)</span><span class="n">notification</span>
+<span class="p">{</span>
+    <span class="p">[[</span><span class="n">NSNotificationCenter</span> <span class="nf">defaultCenter</span><span class="p">]</span> <span class="nf">removeObserver</span><span class="p">:</span><span class="n">self</span> <span class="nf">name</span><span class="p">:</span><span class="n">MPMoviePlayerPlaybackDidFinishNotification</span> <span class="n">object</span><span class="o">:</span><span class="n">notification</span><span class="p">.</span><span class="n">object</span><span class="p">];</span>
+    <span class="n">MPMovieFinishReason</span> <span class="n">finishReason</span> <span class="o">=</span> <span class="p">[</span><span class="n">notification</span><span class="p">.</span><span class="n">userInfo</span><span class="p">[</span><span class="nf">MPMoviePlayerPlaybackDidFinishReasonUserInfoKey</span><span class="p">]</span> <span class="nf">integerValue</span><span class="p">];</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">finishReason</span> <span class="o">==</span> <span class="n">MPMovieFinishReasonPlaybackError</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">NSError</span> <span class="o">*</span><span class="n">error</span> <span class="o">=</span> <span class="n">notification</span><span class="p">.</span><span class="n">userInfo</span><span class="p">[</span><span class="nf">XCDMoviePlayerPlaybackDidFinishErrorUserInfoKey</span><span class="p">];</span>
+        <span class="c1">// Handle error
+</span>    <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre>
+<h4 id='present-the-video-in-a-non-full-screen-view' class='heading'>Present the video in a non full-screen view</h4>
+<pre class="highlight objective_c"><code><span class="n">XCDYouTubeVideoPlayerViewController</span> <span class="o">*</span><span class="n">videoPlayerViewController</span> <span class="o">=</span> <span class="p">[[</span><span class="n">XCDYouTubeVideoPlayerViewController</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">initWithVideoIdentifier</span><span class="p">:</span><span class="s">@"9bZkp7q19f0"</span><span class="p">];</span>
+<span class="p">[</span><span class="n">videoPlayerViewController</span> <span class="nf">presentInView</span><span class="p">:</span><span class="n">self</span><span class="p">.</span><span class="n">videoContainerView</span><span class="p">];</span>
+<span class="p">[</span><span class="n">videoPlayerViewController</span><span class="p">.</span><span class="n">moviePlayer</span> <span class="nf">play</span><span class="p">];</span>
+</code></pre>
+
+<p>See the demo project for more sample code.</p>
+<h2 id='logging' class='heading'>Logging</h2>
+
+<p>Since version 2.2.0, XCDYouTubeKit produces logs. XCDYouTubeKit supports <a href="https://github.com/CocoaLumberjack/CocoaLumberjack">CocoaLumberjack</a> but does not require it.</p>
+
+<p>See the <code><a href="Classes/XCDYouTubeLogger.html">XCDYouTubeLogger</a></code> class <a href="http://cocoadocs.org/docsets/XCDYouTubeKit/">documentation</a> for more information.</p>
+<h2 id='credits' class='heading'>Credits</h2>
+
+<p>The URL extraction algorithms in <em>XCDYouTubeKit</em> are inspired by the <a href="https://github.com/rg3/youtube-dl/blob/master/youtube_dl/extractor/youtube.py">YouTube extractor</a> module of the <em>youtube-dl</em> project.</p>
+<h2 id='contact' class='heading'>Contact</h2>
+
+<p>Cédric Luthi</p>
+
+<ul>
+<li><a href="http://github.com/0xced">http://github.com/0xced</a></li>
+<li><a href="http://twitter.com/0xced">http://twitter.com/0xced</a></li>
+</ul>
+<h2 id='license' class='heading'>License</h2>
+
+<p>XCDYouTubeKit is available under the MIT license. See the <a href="LICENSE">LICENSE</a> file for more information.</p>
+
+            </section>
+          </section>
+        </article>
+      </div>
+      <div class="nav-wrapper">
+        <nav class="nav-bottom">
+          <ul class="nav-groups">
+            <li class="nav-group-name">
+              <a href="Classes.html">Classes</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="Classes/XCDYouTubeClient.html">XCDYouTubeClient</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/XCDYouTubeLogger.html">XCDYouTubeLogger</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/XCDYouTubeVideo.html">XCDYouTubeVideo</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/XCDYouTubeVideoOperation.html">XCDYouTubeVideoOperation</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/XCDYouTubeVideoPlayerViewController.html">XCDYouTubeVideoPlayerViewController</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Classes/XCDYouTubeVideoQueryOperation.html">XCDYouTubeVideoQueryOperation</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="Constants.html">Constants</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="Constants.html#/c:@XCDMetadataKeyLargeThumbnailURL">XCDMetadataKeyLargeThumbnailURL</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Constants.html#/c:@XCDMetadataKeyMediumThumbnailURL">XCDMetadataKeyMediumThumbnailURL</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Constants.html#/c:@XCDMetadataKeySmallThumbnailURL">XCDMetadataKeySmallThumbnailURL</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Constants.html#/c:@XCDMetadataKeyTitle">XCDMetadataKeyTitle</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Constants.html#/c:@XCDMoviePlayerPlaybackDidFinishErrorUserInfoKey">XCDMoviePlayerPlaybackDidFinishErrorUserInfoKey</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Constants.html#/c:@XCDYouTubeAllowedCountriesUserInfoKey">XCDYouTubeAllowedCountriesUserInfoKey</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Constants.html#/c:@XCDYouTubeKitLumberjackContext">XCDYouTubeKitLumberjackContext</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Constants.html#/c:@XCDYouTubeVideoErrorDomain">XCDYouTubeVideoErrorDomain</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Constants.html#/c:@XCDYouTubeVideoPlayerViewControllerDidReceiveMetadataNotification">XCDYouTubeVideoPlayerViewControllerDidReceiveMetadataNotification</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Constants.html#/c:@XCDYouTubeVideoPlayerViewControllerDidReceiveVideoNotification">XCDYouTubeVideoPlayerViewControllerDidReceiveVideoNotification</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Constants.html#/c:@XCDYouTubeVideoQualityHTTPLiveStreaming">XCDYouTubeVideoQualityHTTPLiveStreaming</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Constants.html#/c:@XCDYouTubeVideoUserInfoKey">XCDYouTubeVideoUserInfoKey</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="Enums.html">Enumerations</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="Enums/XCDLogLevel.html">XCDLogLevel</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/XCDYouTubeErrorCode.html">XCDYouTubeErrorCode</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/XCDYouTubeVideoQuality.html">XCDYouTubeVideoQuality</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="Protocols.html">Protocols</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="Protocols/XCDYouTubeOperation.html">XCDYouTubeOperation</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-wrapper">
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="https://twitter.com/0xced" target="_blank" rel="external">Cédric Luthi</a>. All rights reserved. (Last updated: 2020-10-15)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </div>
+    </div>
+  </body>
+</div>
+</html>

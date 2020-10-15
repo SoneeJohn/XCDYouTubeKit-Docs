@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>XCDYouTubeVideoQueryOperation Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0" />
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Class/XCDYouTubeVideoQueryOperation" class="dashAnchor"></a>
+    <a title="XCDYouTubeVideoQueryOperation Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p>
+          <a href="../index.html">XCDYouTubeKit 2.14.1 Docs</a>
+          <span class="no-mobile"> (85% documented)</span>
+        </p>
+    
+        <p class="header-right">
+          <a href="https://github.com/0xced/XCDYouTubeKit">
+            <img src="../img/gh.png"/>
+            <span class="no-mobile">View on GitHub</span>
+          </a>
+        </p>
+    
+      </div>
+    </header>
+    <div id="breadcrumbs-container">
+      <div class="content-wrapper">
+        <p id="breadcrumbs">
+          <span class="no-mobile">
+            <a href="../index.html">XCDYouTubeKit Reference</a>
+            <img id="carat" src="../img/carat.png" />
+          </span>
+          XCDYouTubeVideoQueryOperation Class Reference
+        </p>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="article-wrapper">
+        <article class="main-content">
+          <section>
+            <section class="section">
+              <h1>XCDYouTubeVideoQueryOperation</h1>
+                <div class="declaration">
+                  <div class="language">
+                    <p class="aside-title">Objective-C</p>
+                    <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">XCDYouTubeVideoQueryOperation</span> <span class="p">:</span> <span class="nc">NSOperation</span></code></pre>
+
+                  </div>
+                  <div class="language">
+                    <p class="aside-title">Swift</p>
+                    <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">XCDYouTubeVideoQueryOperation</span> <span class="p">:</span> <span class="kt">Operation</span></code></pre>
+
+                  </div>
+                </div>
+              <p>XCDYouTubeVideoQueryOperation is a subclass of <code>NSOperation</code> that  check to see if the <code>streamURLs</code> in a <code><a href="../Classes/XCDYouTubeVideo.html">XCDYouTubeVideo</a></code> object  is reachable (i.e. does not contain any HTTP errors). This operation will only run on a background queue, starting this operation on the main thread will raise an assertion.
+You should probably use the higher level class <code>&lt;XCDYouTubeClient&gt;</code>. Use this class only if you are very familiar with <code>NSOperation</code> and need to manage dependencies between operations.</p>
+
+                <div class="slightly-smaller">
+                  <a href="https://github.com/0xced/XCDYouTubeKit/tree/2.14.1/XCDYouTubeKit/XCDYouTubeVideoQueryOperation.h#L23-L63">Show on GitHub</a>
+                </div>
+            </section>
+            <section class="section task-group-section">
+              <div class="task-group">
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(cs)XCDYouTubeVideoQueryOperation(im)initWithVideo:cookies:"></a>
+                      <a name="//apple_ref/objc/Method/-initWithVideo:cookies:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(cs)XCDYouTubeVideoQueryOperation(im)initWithVideo:cookies:">-initWithVideo:<wbr>cookies:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Initializes a video  query operation with the specified video and cookies.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithVideo</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/XCDYouTubeVideo.html">XCDYouTubeVideo</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">video</span>
+                              <span class="nf">cookies</span><span class="p">:</span>
+                                  <span class="p">(</span><span class="n">nullable</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSHTTPCookie</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">cookies</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">video</span><span class="p">:</span> <span class="kt"><a href="../Classes/XCDYouTubeVideo.html">XCDYouTubeVideo</a></span><span class="p">,</span> <span class="nv">cookies</span><span class="p">:</span> <span class="p">[</span><span class="kt">HTTPCookie</span><span class="p">]?)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>video</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The <code>&lt;XCDYouTubeVideo&gt;</code> object that this operation will query. Passing a <code>nil</code> video will throw an <code>NSInvalidArgumentException</code> exception.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>cookies</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>An array of <code>NSHTTPCookie</code> objects, can be nil. These cookies can be used for certain videos that require a login.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="slightly-smaller">
+                          <a href="https://github.com/0xced/XCDYouTubeKit/tree/2.14.1/XCDYouTubeKit/XCDYouTubeVideoQueryOperation.h#L29">Show on GitHub</a>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(cs)XCDYouTubeVideoQueryOperation(im)initWithVideo:streamURLsToQuery:options:cookies:"></a>
+                      <a name="//apple_ref/objc/Method/-initWithVideo:streamURLsToQuery:options:cookies:" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(cs)XCDYouTubeVideoQueryOperation(im)initWithVideo:streamURLsToQuery:options:cookies:">-initWithVideo:<wbr>streamURLsToQuery:<wbr>options:<wbr>cookies:<wbr></a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Initializes a video  query operation with the specified video,  stream URLs to query and cookies.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span>
+        <span class="nf">initWithVideo</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/XCDYouTubeVideo.html">XCDYouTubeVideo</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">video</span>
+    <span class="nf">streamURLsToQuery</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">id</span><span class="p">,</span> <span class="n">NSURL</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">streamURLsToQuery</span>
+              <span class="nf">options</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">options</span>
+              <span class="nf">cookies</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSHTTPCookie</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">cookies</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">video</span><span class="p">:</span> <span class="kt"><a href="../Classes/XCDYouTubeVideo.html">XCDYouTubeVideo</a></span><span class="p">,</span> <span class="nv">streamURLsToQuery</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">URL</span><span class="p">]?,</span> <span class="nv">options</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">cookies</span><span class="p">:</span> <span class="p">[</span><span class="kt">HTTPCookie</span><span class="p">]?)</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>video</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The <code>&lt;XCDYouTubeVideo&gt;</code> object that this operation will query. Passing a <code>nil</code> video will throw an <code>NSInvalidArgumentException</code> exception.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>streamURLsToQuery</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The specific stream URLs to query, can be nil. These URLs and keys must be contained in the <code><a href="../Classes/XCDYouTubeVideoQueryOperation.html#/c:objc(cs)XCDYouTubeVideoQueryOperation(py)streamURLs">streamURLs</a></code> property of the <code><a href="../Classes/XCDYouTubeVideoQueryOperation.html#/c:objc(cs)XCDYouTubeVideoQueryOperation(py)video">video</a></code> object, if none of the values in <code><a href="../Classes/XCDYouTubeVideoQueryOperation.html#/c:objc(cs)XCDYouTubeVideoQueryOperation(py)streamURLsToQuery">streamURLsToQuery</a></code> match then all of the <code><a href="../Classes/XCDYouTubeVideoQueryOperation.html#/c:objc(cs)XCDYouTubeVideoQueryOperation(py)streamURLs">streamURLs</a></code>  will be queried.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>options</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>Options that are reserved for future use.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>cookies</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>An array of <code>NSHTTPCookie</code> objects, can be nil. These cookies can be used for certain videos that require a login.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="slightly-smaller">
+                          <a href="https://github.com/0xced/XCDYouTubeKit/tree/2.14.1/XCDYouTubeKit/XCDYouTubeVideoQueryOperation.h#L36">Show on GitHub</a>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(cs)XCDYouTubeVideoQueryOperation(py)video"></a>
+                      <a name="//apple_ref/objc/Property/video" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(cs)XCDYouTubeVideoQueryOperation(py)video">video</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>The <code>video</code> object that the operation initialized initialized with.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">strong</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="../Classes/XCDYouTubeVideo.html">XCDYouTubeVideo</a></span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">video</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">video</span><span class="p">:</span> <span class="kt"><a href="../Classes/XCDYouTubeVideo.html">XCDYouTubeVideo</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div class="slightly-smaller">
+                          <a href="https://github.com/0xced/XCDYouTubeKit/tree/2.14.1/XCDYouTubeKit/XCDYouTubeVideoQueryOperation.h#L39">Show on GitHub</a>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(cs)XCDYouTubeVideoQueryOperation(py)streamURLsToQuery"></a>
+                      <a name="//apple_ref/objc/Property/streamURLsToQuery" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(cs)XCDYouTubeVideoQueryOperation(py)streamURLsToQuery">streamURLsToQuery</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">strong</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">id</span><span class="p">,</span> <span class="n">NSURL</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">streamURLsToQuery</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">streamURLsToQuery</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">URL</span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div class="slightly-smaller">
+                          <a href="https://github.com/0xced/XCDYouTubeKit/tree/2.14.1/XCDYouTubeKit/XCDYouTubeVideoQueryOperation.h#L">Show on GitHub</a>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(cs)XCDYouTubeVideoQueryOperation(py)cookies"></a>
+                      <a name="//apple_ref/objc/Property/cookies" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(cs)XCDYouTubeVideoQueryOperation(py)cookies">cookies</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>The array of <code>NSHTTPCookie</code> objects passed during initialization.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">copy</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSHTTPCookie</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">cookies</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">cookies</span><span class="p">:</span> <span class="p">[</span><span class="kt">HTTPCookie</span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div class="slightly-smaller">
+                          <a href="https://github.com/0xced/XCDYouTubeKit/tree/2.14.1/XCDYouTubeKit/XCDYouTubeVideoQueryOperation.h#L44">Show on GitHub</a>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(cs)XCDYouTubeVideoQueryOperation(py)streamURLs"></a>
+                      <a name="//apple_ref/objc/Property/streamURLs" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(cs)XCDYouTubeVideoQueryOperation(py)streamURLs">streamURLs</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">id</span><span class="p">,</span> <span class="n">NSURL</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">streamURLs</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">streamURLs</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">URL</span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div class="slightly-smaller">
+                          <a href="https://github.com/0xced/XCDYouTubeKit/tree/2.14.1/XCDYouTubeKit/XCDYouTubeVideoQueryOperation.h#L">Show on GitHub</a>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(cs)XCDYouTubeVideoQueryOperation(py)error"></a>
+                      <a name="//apple_ref/objc/Property/error" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(cs)XCDYouTubeVideoQueryOperation(py)error">error</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returns an error of the <code><a href="../Constants.html#/c:@XCDYouTubeVideoErrorDomain">XCDYouTubeVideoErrorDomain</a></code> domain if the operation failed or nil if it succeeded. The operation will only return an error if no stream URL is reachable (error code: <code>XCDYouTubeErrorNoStreamAvailable</code>). Also, this returns <code>nil</code> if the operation is not yet finished or if it was canceled.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">;</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div class="slightly-smaller">
+                          <a href="https://github.com/0xced/XCDYouTubeKit/tree/2.14.1/XCDYouTubeKit/XCDYouTubeVideoQueryOperation.h#L54">Show on GitHub</a>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:objc(cs)XCDYouTubeVideoQueryOperation(py)streamErrors"></a>
+                      <a name="//apple_ref/objc/Property/streamErrors" class="dashAnchor"></a>
+                      <a class="token" href="#/c:objc(cs)XCDYouTubeVideoQueryOperation(py)streamErrors">streamErrors</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">id</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">streamErrors</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">streamErrors</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Error</span><span class="p">]?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div class="slightly-smaller">
+                          <a href="https://github.com/0xced/XCDYouTubeKit/tree/2.14.1/XCDYouTubeKit/XCDYouTubeVideoQueryOperation.h#L">Show on GitHub</a>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </section>
+        </article>
+      </div>
+      <div class="nav-wrapper">
+        <nav class="nav-bottom">
+          <ul class="nav-groups">
+            <li class="nav-group-name">
+              <a href="../Classes.html">Classes</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Classes/XCDYouTubeClient.html">XCDYouTubeClient</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/XCDYouTubeLogger.html">XCDYouTubeLogger</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/XCDYouTubeVideo.html">XCDYouTubeVideo</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/XCDYouTubeVideoOperation.html">XCDYouTubeVideoOperation</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/XCDYouTubeVideoPlayerViewController.html">XCDYouTubeVideoPlayerViewController</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/XCDYouTubeVideoQueryOperation.html">XCDYouTubeVideoQueryOperation</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Constants.html">Constants</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:@XCDMetadataKeyLargeThumbnailURL">XCDMetadataKeyLargeThumbnailURL</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:@XCDMetadataKeyMediumThumbnailURL">XCDMetadataKeyMediumThumbnailURL</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:@XCDMetadataKeySmallThumbnailURL">XCDMetadataKeySmallThumbnailURL</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:@XCDMetadataKeyTitle">XCDMetadataKeyTitle</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:@XCDMoviePlayerPlaybackDidFinishErrorUserInfoKey">XCDMoviePlayerPlaybackDidFinishErrorUserInfoKey</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:@XCDYouTubeAllowedCountriesUserInfoKey">XCDYouTubeAllowedCountriesUserInfoKey</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:@XCDYouTubeKitLumberjackContext">XCDYouTubeKitLumberjackContext</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:@XCDYouTubeVideoErrorDomain">XCDYouTubeVideoErrorDomain</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:@XCDYouTubeVideoPlayerViewControllerDidReceiveMetadataNotification">XCDYouTubeVideoPlayerViewControllerDidReceiveMetadataNotification</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:@XCDYouTubeVideoPlayerViewControllerDidReceiveVideoNotification">XCDYouTubeVideoPlayerViewControllerDidReceiveVideoNotification</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:@XCDYouTubeVideoQualityHTTPLiveStreaming">XCDYouTubeVideoQualityHTTPLiveStreaming</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:@XCDYouTubeVideoUserInfoKey">XCDYouTubeVideoUserInfoKey</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Enums.html">Enumerations</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Enums/XCDLogLevel.html">XCDLogLevel</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/XCDYouTubeErrorCode.html">XCDYouTubeErrorCode</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/XCDYouTubeVideoQuality.html">XCDYouTubeVideoQuality</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Protocols.html">Protocols</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Protocols/XCDYouTubeOperation.html">XCDYouTubeOperation</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-wrapper">
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="https://twitter.com/0xced" target="_blank" rel="external">Cédric Luthi</a>. All rights reserved. (Last updated: 2020-10-15)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </div>
+    </div>
+  </body>
+</div>
+</html>

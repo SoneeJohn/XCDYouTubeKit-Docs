@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>XCDYouTubeErrorCode Enumeration Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0" />
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Enum/XCDYouTubeErrorCode" class="dashAnchor"></a>
+    <a title="XCDYouTubeErrorCode Enumeration Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p>
+          <a href="../index.html">XCDYouTubeKit 2.14.1 Docs</a>
+          <span class="no-mobile"> (85% documented)</span>
+        </p>
+    
+        <p class="header-right">
+          <a href="https://github.com/0xced/XCDYouTubeKit">
+            <img src="../img/gh.png"/>
+            <span class="no-mobile">View on GitHub</span>
+          </a>
+        </p>
+    
+      </div>
+    </header>
+    <div id="breadcrumbs-container">
+      <div class="content-wrapper">
+        <p id="breadcrumbs">
+          <span class="no-mobile">
+            <a href="../index.html">XCDYouTubeKit Reference</a>
+            <img id="carat" src="../img/carat.png" />
+          </span>
+          XCDYouTubeErrorCode Enumeration Reference
+        </p>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="article-wrapper">
+        <article class="main-content">
+          <section>
+            <section class="section">
+              <h1>XCDYouTubeErrorCode</h1>
+                <div class="declaration">
+                  <div class="language">
+                    <p class="aside-title">Objective-C</p>
+                    <pre class="highlight objective_c"><code><span class="k">enum</span> <span class="n">XCDYouTubeErrorCode</span> <span class="p">{}</span></code></pre>
+
+                  </div>
+                  <div class="language">
+                    <p class="aside-title">Swift</p>
+                    <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">XCDYouTubeErrorCode</span> <span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                  </div>
+                </div>
+              <p>These values are returned as the error code property of an NSError object with the domain <code><a href="../Constants.html#/c:@XCDYouTubeVideoErrorDomain">XCDYouTubeVideoErrorDomain</a></code>.</p>
+
+                <div class="slightly-smaller">
+                  <a href="https://github.com/0xced/XCDYouTubeKit/tree/2.14.1/XCDYouTubeKit/XCDYouTubeError.h#L21-L56">Show on GitHub</a>
+                </div>
+            </section>
+            <section class="section task-group-section">
+              <div class="task-group">
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@E@XCDYouTubeErrorCode@XCDYouTubeErrorNoStreamAvailable"></a>
+                      <a name="//apple_ref/objc/Case/XCDYouTubeErrorNoStreamAvailable" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@E@XCDYouTubeErrorCode@XCDYouTubeErrorNoStreamAvailable">XCDYouTubeErrorNoStreamAvailable</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returned when no suitable video stream is available. This can occur due to various reason such as:</p>
+
+<ul>
+<li>The video is not playable because of legal reasons or when the video is private.</li>
+<li>The given video identifier string is invalid.</li>
+<li>The video was removed as a violation of YouTube&rsquo;s policy or when the video did not exist.</li>
+</ul>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="n">XCDYouTubeErrorNoStreamAvailable</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">noStreamAvailable</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div class="slightly-smaller">
+                          <a href="https://github.com/0xced/XCDYouTubeKit/tree/2.14.1/XCDYouTubeKit/XCDYouTubeError.h#L28">Show on GitHub</a>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@E@XCDYouTubeErrorCode@XCDYouTubeErrorNetwork"></a>
+                      <a name="//apple_ref/objc/Case/XCDYouTubeErrorNetwork" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@E@XCDYouTubeErrorCode@XCDYouTubeErrorNetwork">XCDYouTubeErrorNetwork</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returned when a network error occurs. See <code>NSUnderlyingErrorKey</code> in the userInfo dictionary for more information.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="n">XCDYouTubeErrorNetwork</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">network</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div class="slightly-smaller">
+                          <a href="https://github.com/0xced/XCDYouTubeKit/tree/2.14.1/XCDYouTubeKit/XCDYouTubeError.h#L33">Show on GitHub</a>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@E@XCDYouTubeErrorCode@XCDYouTubeErrorEmptyResponse"></a>
+                      <a name="//apple_ref/objc/Case/XCDYouTubeErrorEmptyResponse" class="dashAnchor"></a>
+                      <a class="token" href="#/c:@E@XCDYouTubeErrorCode@XCDYouTubeErrorEmptyResponse">XCDYouTubeErrorEmptyResponse</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Returned when an empty response is returned. This may indicate that YouTube has blocked requests from your IP address because of overuse.
+This error does not contain any info in the <code>userInfo</code> property and is not appropriate to show to the user.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="n">XCDYouTubeErrorEmptyResponse</span> <span class="o">=</span> <span class="o">-</span><span class="mi">3</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">emptyResponse</span> <span class="o">=</span> <span class="o">-</span><span class="mi">3</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div class="slightly-smaller">
+                          <a href="https://github.com/0xced/XCDYouTubeKit/tree/2.14.1/XCDYouTubeKit/XCDYouTubeError.h#L38">Show on GitHub</a>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@E@XCDYouTubeErrorCode@XCDYouTubeErrorInvalidVideoIdentifier"></a>
+                      <a name="//apple_ref/objc/Case/XCDYouTubeErrorInvalidVideoIdentifier" class="dashAnchor"></a>
+                      <a class="token discouraged" href="#/c:@E@XCDYouTubeErrorCode@XCDYouTubeErrorInvalidVideoIdentifier">XCDYouTubeErrorInvalidVideoIdentifier</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="aside aside-deprecated">
+                          <p class="aside-title">Deprecated</p>
+                          <p>YouTube has stopped using error code 2.</p>
+
+                        </div>
+                        <div class="abstract">
+                          <p>Previously returned when the given video identifier string is invalid.
+Use <code><a href="../Enums/XCDYouTubeErrorCode.html#/c:@E@XCDYouTubeErrorCode@XCDYouTubeErrorNoStreamAvailable">XCDYouTubeErrorNoStreamAvailable</a></code> instead.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="n">XCDYouTubeErrorInvalidVideoIdentifier</span> <span class="o">=</span> <span class="mi">2</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidVideoIdentifier</span> <span class="o">=</span> <span class="mi">2</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div class="slightly-smaller">
+                          <a href="https://github.com/0xced/XCDYouTubeKit/tree/2.14.1/XCDYouTubeKit/XCDYouTubeError.h#L44">Show on GitHub</a>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@E@XCDYouTubeErrorCode@XCDYouTubeErrorRemovedVideo"></a>
+                      <a name="//apple_ref/objc/Case/XCDYouTubeErrorRemovedVideo" class="dashAnchor"></a>
+                      <a class="token discouraged" href="#/c:@E@XCDYouTubeErrorCode@XCDYouTubeErrorRemovedVideo">XCDYouTubeErrorRemovedVideo</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="aside aside-deprecated">
+                          <p class="aside-title">Deprecated</p>
+                          <p>YouTube has stopped using error code 100.</p>
+
+                        </div>
+                        <div class="abstract">
+                          <p>Previously returned when the video was removed as a violation of YouTube&rsquo;s policy or when the video did not exist.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="n">XCDYouTubeErrorRemovedVideo</span> <span class="o">=</span> <span class="mi">100</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">removedVideo</span> <span class="o">=</span> <span class="mi">100</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div class="slightly-smaller">
+                          <a href="https://github.com/0xced/XCDYouTubeKit/tree/2.14.1/XCDYouTubeKit/XCDYouTubeError.h#L49">Show on GitHub</a>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/c:@E@XCDYouTubeErrorCode@XCDYouTubeErrorRestrictedPlayback"></a>
+                      <a name="//apple_ref/objc/Case/XCDYouTubeErrorRestrictedPlayback" class="dashAnchor"></a>
+                      <a class="token discouraged" href="#/c:@E@XCDYouTubeErrorCode@XCDYouTubeErrorRestrictedPlayback">XCDYouTubeErrorRestrictedPlayback</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="aside aside-deprecated">
+                          <p class="aside-title">Deprecated</p>
+                          <p>YouTube has stopped using error code 150.</p>
+
+                        </div>
+                        <div class="abstract">
+                          <p>Previously returned when the video is not playable because of legal reasons or when the video is private.
+Use <code><a href="../Enums/XCDYouTubeErrorCode.html#/c:@E@XCDYouTubeErrorCode@XCDYouTubeErrorNoStreamAvailable">XCDYouTubeErrorNoStreamAvailable</a></code> instead.</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Objective-C</p>
+                            <pre class="highlight objective_c"><code><span class="n">XCDYouTubeErrorRestrictedPlayback</span> <span class="o">=</span> <span class="mi">150</span></code></pre>
+
+                          </div>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">restrictedPlayback</span> <span class="o">=</span> <span class="mi">150</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div class="slightly-smaller">
+                          <a href="https://github.com/0xced/XCDYouTubeKit/tree/2.14.1/XCDYouTubeKit/XCDYouTubeError.h#L55">Show on GitHub</a>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </section>
+        </article>
+      </div>
+      <div class="nav-wrapper">
+        <nav class="nav-bottom">
+          <ul class="nav-groups">
+            <li class="nav-group-name">
+              <a href="../Classes.html">Classes</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Classes/XCDYouTubeClient.html">XCDYouTubeClient</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/XCDYouTubeLogger.html">XCDYouTubeLogger</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/XCDYouTubeVideo.html">XCDYouTubeVideo</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/XCDYouTubeVideoOperation.html">XCDYouTubeVideoOperation</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/XCDYouTubeVideoPlayerViewController.html">XCDYouTubeVideoPlayerViewController</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/XCDYouTubeVideoQueryOperation.html">XCDYouTubeVideoQueryOperation</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Constants.html">Constants</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:@XCDMetadataKeyLargeThumbnailURL">XCDMetadataKeyLargeThumbnailURL</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:@XCDMetadataKeyMediumThumbnailURL">XCDMetadataKeyMediumThumbnailURL</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:@XCDMetadataKeySmallThumbnailURL">XCDMetadataKeySmallThumbnailURL</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:@XCDMetadataKeyTitle">XCDMetadataKeyTitle</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:@XCDMoviePlayerPlaybackDidFinishErrorUserInfoKey">XCDMoviePlayerPlaybackDidFinishErrorUserInfoKey</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:@XCDYouTubeAllowedCountriesUserInfoKey">XCDYouTubeAllowedCountriesUserInfoKey</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:@XCDYouTubeKitLumberjackContext">XCDYouTubeKitLumberjackContext</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:@XCDYouTubeVideoErrorDomain">XCDYouTubeVideoErrorDomain</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:@XCDYouTubeVideoPlayerViewControllerDidReceiveMetadataNotification">XCDYouTubeVideoPlayerViewControllerDidReceiveMetadataNotification</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:@XCDYouTubeVideoPlayerViewControllerDidReceiveVideoNotification">XCDYouTubeVideoPlayerViewControllerDidReceiveVideoNotification</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:@XCDYouTubeVideoQualityHTTPLiveStreaming">XCDYouTubeVideoQualityHTTPLiveStreaming</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Constants.html#/c:@XCDYouTubeVideoUserInfoKey">XCDYouTubeVideoUserInfoKey</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Enums.html">Enumerations</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Enums/XCDLogLevel.html">XCDLogLevel</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/XCDYouTubeErrorCode.html">XCDYouTubeErrorCode</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/XCDYouTubeVideoQuality.html">XCDYouTubeVideoQuality</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Protocols.html">Protocols</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Protocols/XCDYouTubeOperation.html">XCDYouTubeOperation</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-wrapper">
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="https://twitter.com/0xced" target="_blank" rel="external">Cédric Luthi</a>. All rights reserved. (Last updated: 2020-10-15)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </div>
+    </div>
+  </body>
+</div>
+</html>
